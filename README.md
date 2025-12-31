@@ -1,6 +1,21 @@
-# AI交易策略系统
+# AI交易策略回测系统 (AI Trading Strategy Backtesting System)
+
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
+[![React](https://img.shields.io/badge/React-18+-61DAFB?style=flat&logo=react)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?style=flat&logo=typescript)](https://www.typescriptlang.org/)
+[![Version](https://img.shields.io/badge/Version-cn--0.1.0-green.svg)](./VERSION)
 
 基于FastAPI和SQLModel构建的智能交易策略执行系统，集成本地AI决策和远程策略服务，支持多市场、多策略的虚拟交易。
+
+## About Us
+- **Official Twitter** - [@MergeFi_AI](https://x.com/mergefi_ai)
+
+- **TG Community** -  [Mergefi Community](https://t.me/+cLH339AwS_g5Zjkx)
+
+## Screenshoots
+### 策略后台
+<img src="screenshots/1.png" width=""/> 
 
 ## 核心概念
 
@@ -74,6 +89,47 @@ backtesting_tool/
 ├── status.sh               # 状态检查脚本
 └── stop.sh                 # 停止脚本
 ```
+### 前置要求
+- Python 3.12+
+- Node.js 18+
+- pnpm 8+
+
+### 1. 克隆项目
+```bash
+git clone https://github.com/your-repo/backtesting_tool.git
+cd backtesting_tool
+```
+
+### 2. 启动后端服务
+```bash
+# 创建并激活虚拟环境
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+
+# 安装依赖
+pip install -r requirements.txt
+
+# 配置环境变量
+cp cfg/.env.sqlite .env
+
+# 启动服务
+./start.sh
+# 或直接运行: python main.py
+```
+API 文档地址: `http://localhost:8000/docs`
+
+### 3. 启动前端服务
+```bash
+cd frontend
+pnpm install
+pnpm dev
+```
+访问地址: `http://localhost:5173`
+
+### 🐳 Docker 部署
+```bash
+docker-compose up -d
+```
 
 ## 项目文档说明
 
@@ -86,6 +142,29 @@ backtesting_tool/
 - [API文档](docs/api_documentation.md)
 
 - [前端开发指南](frontend/README.md)
+
+## 🤝 如何贡献
+   
+我们欢迎所有形式的贡献！
+
+### 贡献类型
+
+- 🐛 **Bug修复** - 发现并修复问题
+- ✨ **新功能** - 添加新的功能特性
+- 📚 **文档改进** - 完善文档和教程
+- 🌐 **本地化** - 翻译和本地化工作
+- 🎨 **代码优化** - 性能优化和代码重构
+
+### 贡献流程
+
+1. Fork 本仓库
+2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 创建 Pull Request
+
+请阅读我们的[贡献指南](CONTRIBUTING.md)。
+
 
 ## 技术栈
 
@@ -117,4 +196,4 @@ backtesting_tool/
 
 ## 许可证
 
-Apache-2.0 license
+[Apache-2.0 License](LICENSE)
