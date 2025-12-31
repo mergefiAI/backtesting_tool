@@ -89,6 +89,9 @@ backtesting_tool/
 ├── status.sh               # 状态检查脚本
 └── stop.sh                 # 停止脚本
 ```
+
+## 快速开始
+
 ### 前置要求
 - Python 3.12+
 - Node.js 18+
