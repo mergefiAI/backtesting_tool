@@ -11,10 +11,13 @@
 ## About Us
 - **Official Twitter** - [@MergeFi_AI](https://x.com/mergefi_ai)
 
-##  Community
+## Community
 
 Join our Telegram community: **[Mergefi Community](https://t.me/+cLH339AwS_g5Zjkx)**
 
+## Screenshoots
+### 策略后台
+<img src="screenshots/1.png" width=""/> 
 
 ## 核心概念
 
