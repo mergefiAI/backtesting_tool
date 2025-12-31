@@ -2,9 +2,19 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
+[![React](https://img.shields.io/badge/React-18+-61DAFB?style=flat&logo=react)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?style=flat&logo=typescript)](https://www.typescriptlang.org/)
 [![Version](https://img.shields.io/badge/Version-cn--0.1.0-green.svg)](./VERSION)
 
 基于FastAPI和SQLModel构建的智能交易策略执行系统，集成本地AI决策和远程策略服务，支持多市场、多策略的虚拟交易。
+
+## About Us
+- **Official Twitter** - [@MergeFi_AI](https://x.com/mergefi_ai)
+
+##  Community
+
+Join our Telegram community: **[Mergefi Community](https://t.me/+cLH339AwS_g5Zjkx)**
+
 
 ## 核心概念
 
@@ -91,9 +101,10 @@ backtesting_tool/
 
 - [前端开发指南](frontend/README.md)
 
-   ## 🤝 如何贡献
+## 🤝 如何贡献
    
-   我们欢迎所有形式的贡献！请阅读我们的[贡献指南](CONTRIBUTING.md)开始。
+我们欢迎所有形式的贡献！请阅读我们的[贡献指南](CONTRIBUTING.md)开始。
+
 
 ## 技术栈
 
