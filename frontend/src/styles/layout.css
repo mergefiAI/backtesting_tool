@@ -1,0 +1,69 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.admin-layout-root {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-layout-header {
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  height: 64px;
+  line-height: 64px;
+  flex: 0 0 64px;
+  z-index: 100;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.admin-layout-content {
+  padding: 16px;
+  background: #f0f2f5;
+  width: 100%;
+  box-sizing: border-box;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+  background: white;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-width: 0;
+}
+
+.divider {
+  width: 1px;
+  height: 16px;
+  background: rgba(0,0,0,0.15);
+  margin: 0 8px;
+}
+
+@media (max-width: 992px) {
+  .admin-layout-content { 
+    padding: 12px;
+  }
+  .admin-page-container { 
+    gap: 12px; 
+  }
+}
+

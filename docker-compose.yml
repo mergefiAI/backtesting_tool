@@ -1,0 +1,56 @@
+# 注意：在国内网络环境下，如果遇到镜像拉取失败的问题，
+# 请参考 docs/docker_mirror_configuration.md 中的说明配置国内镜像源
+
+services:
+  # 后端服务
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: backtesting_backend
+    environment:
+      - DATABASE_URL=sqlite:///./db/backtesting_dev.db
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+      - CORS_ALLOW_ORIGINS=http://localhost:5173,http://127.0.0.1:5173
+      - BT_CONFIG=${BT_CONFIG:-default}
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./db:/app/db
+      - ./data:/app/data
+    networks:
+      - backtesting_network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8000/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # 前端服务
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: backtesting_frontend
+    environment:
+      - VITE_API_BASE_URL=http://localhost:8000
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    networks:
+      - backtesting_network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:5173 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+# 网络配置
+networks:
+  backtesting_network:
+    driver: bridge
+    name: backtesting_network
