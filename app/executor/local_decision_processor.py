@@ -29,30 +29,17 @@ def make_decision_with_agent(session: Session, account: VirtualAccount, analysis
 
     try:
         # 动态获取决策执行函数
-        if user_prompt == "!!custom!!":
-            from app.services.custom.custom_zp_decision_agent import execute_decision
-            decision, decision_id = execute_decision(
-                account=account,
-                price=price,
-                session=session,
-                task_id=task_id,
-                user_prompt=user_prompt,
-                analysis_date=analysis_date,
-                time_granularity=time_granularity,
-                ai_config_id=ai_config_id
-            )
-        else:
-            from app.services.ai_decision_agent import execute_decision
-            decision, decision_id = execute_decision(
-                account=account,
-                price=price,
-                session=session,
-                task_id=task_id,
-                user_prompt=user_prompt,
-                analysis_date=analysis_date,
-                time_granularity=time_granularity,
-                ai_config_id=ai_config_id
-            )
+        from app.services.ai_decision_agent import execute_decision
+        decision, decision_id = execute_decision(
+            account=account,
+            price=price,
+            session=session,
+            task_id=task_id,
+            user_prompt=user_prompt,
+            analysis_date=analysis_date,
+            time_granularity=time_granularity,
+            ai_config_id=ai_config_id
+        )
         # 检查决策结果是否有效
         if decision is None or decision_id is None:
             logger.error(f"AI决策执行失败，返回无效结果: decision={decision}, decision_id={decision_id}")
