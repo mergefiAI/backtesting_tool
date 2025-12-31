@@ -11,9 +11,7 @@
 ## About Us
 - **Official Twitter** - [@MergeFi_AI](https://x.com/mergefi_ai)
 
-## Community
-
-Join our Telegram community: **[Mergefi Community](https://t.me/+cLH339AwS_g5Zjkx)**
+- **TG Community** -  [Mergefi Community](https://t.me/+cLH339AwS_g5Zjkx)**
 
 ## Screenshoots
 ### 策略后台
