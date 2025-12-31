@@ -87,6 +87,10 @@ backtesting_tool/
 
 - [前端开发指南](frontend/README.md)
 
+   ## 🤝 如何贡献
+   
+   我们欢迎所有形式的贡献！请阅读我们的[贡献指南](CONTRIBUTING.md)开始。
+
 ## 技术栈
 
 ### 后端
