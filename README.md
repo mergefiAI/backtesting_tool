@@ -1,5 +1,9 @@
 # AI交易策略系统
 
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
+[![Version](https://img.shields.io/badge/Version-cn--0.1.0-green.svg)](./VERSION)
+
 基于FastAPI和SQLModel构建的智能交易策略执行系统，集成本地AI决策和远程策略服务，支持多市场、多策略的虚拟交易。
 
 ## 核心概念
